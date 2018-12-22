@@ -1,0 +1,58 @@
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-img src="/assets/logo.PNG"></ion-img>
+            </ion-col>
+          </ion-row>
+      <ion-row>
+        <ion-col>
+            <ion-select (ionChange)="getBldgList()" class="wrapper-dropdown" [interfaceOptions]="societyOptions" interface="action-sheet" placeholder="Select your society">
+                <ion-select-option>10 Elite Residency</ion-select-option>
+                <ion-select-option>Kalpataru Estate</ion-select-option>
+                <ion-select-option>Om Sai Colony</ion-select-option>
+                <ion-select-option>Shrushti Estate</ion-select-option>
+                <ion-select-option>Vinayak Residents</ion-select-option>
+            </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+              <ion-select [(ngModel)]='wingBlock' (ionChange)="getFlatList()" class="wrapper-dropdown" [interfaceOptions]="wingOptions" interface="action-sheet" placeholder="Wing/Block">
+                <ion-select-option>A</ion-select-option>
+                <ion-select-option>A1</ion-select-option>
+                <ion-select-option>B</ion-select-option>
+                <ion-select-option>B1</ion-select-option>
+                <ion-select-option>C</ion-select-option>
+            </ion-select>
+          </ion-col>
+          <ion-col>
+              <ion-select [(ngModel)]='flatNumber' (ionChange)="getSocietyDetails()" class="wrapper-dropdown" [interfaceOptions]="flatOptions" interface="action-sheet" placeholder="Flat No.">
+                  <ion-select-option>701</ion-select-option>
+                  <ion-select-option>102</ion-select-option>
+                  <ion-select-option>103</ion-select-option>
+                  <ion-select-option>104</ion-select-option>
+                  <ion-select-option>105</ion-select-option>
+              </ion-select>
+          </ion-col>
+      </ion-row>
+     <ion-row *ngIf="isOn">
+       <ion-col>
+          <ion-label><b>Address</b></ion-label>
+          <p>{{wingBlock}} - {{flatNumber}}, 10 Elite Residency, Kathepuram Chowk, Pimple Gurav, Pune - 411061</p>
+          
+          <ion-label><b>Society</b></ion-label>
+          <p>10 Elite Residency</p>
+          
+          <ion-label><b>Chairman</b></ion-label>
+          <p>Sudhir Chaudhary</p>
+       </ion-col>
+     </ion-row>
+    </ion-grid>
+</ion-content>
+<ion-footer>
+    <ion-button expand="full" size="large" color="primary" [routerLink]="['/signup2']">
+       <!-- <ion-icon slot="end" name="fastforward"></ion-icon> -->
+       Get Started
+     </ion-button>
+</ion-footer>

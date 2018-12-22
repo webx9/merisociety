@@ -1,0 +1,24 @@
+<ion-content padding>
+    <ion-item>
+        <ion-label position="stacked">OTP</ion-label>
+        <ion-input type="number" placeholder="Enter OTP"></ion-input>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+          <ion-col>
+            <a href="#">Resend OTP</a>
+          </ion-col>
+          <ion-col style="text-align:right;">
+            <a href="#">Get OTP on call</a>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-button expand="full" size="large" color="primary" [routerLink]="['/home']">
+                    <!-- <ion-icon slot="end" name="fastforward"></ion-icon> -->
+                    Verify
+                  </ion-button>
+            </ion-col>
+          </ion-row>
+    </ion-grid>
+</ion-content>

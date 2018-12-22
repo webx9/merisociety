@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Success</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-text color="dark">
+        <h5>Order placed successfully!</h5>
+        <p>Order no. #123456</p>
+    </ion-text>
+    <ion-text color="dark">
+        <h5>Delivery between:</h5>
+    </ion-text>
+    <ion-text color="dark">
+        <h6>Today, 8:55 PM - 10:55 PM</h6>
+    </ion-text>
+    <p><br></p>
+    <p>
+        Manage your orders from 'My Orders' section.
+      </p>
+    <ion-button expand="full" size="default" color="success" [routerLink]="['/orders']">
+      <ion-icon slot="start" name="cash"></ion-icon>
+      View Order
+    </ion-button>
+</ion-content>

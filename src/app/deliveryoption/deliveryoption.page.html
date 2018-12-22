@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>Confirm Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-text color="dark">
+        <h5>Deliver to:</h5>
+    </ion-text>
+    <p>
+      B1 701, 10 Elite Residency, Pimple Gurav, Pimpri Chinchwad, Pune - 411061
+    </p>
+    <ion-text color="dark">
+        <h6>Today, 8:55 PM - 10:55 PM</h6>
+    </ion-text>
+    <ion-text color="dark">
+        <h6>Delivery Charges: FREE</h6>
+    </ion-text>
+    <p><br></p>
+    <ion-button expand="full" size="default" color="success"  [routerLink]="['/orderconfirmation']">
+      <ion-icon slot="start" name="checkbox"></ion-icon>
+      Place Order
+    </ion-button>
+</ion-content>

@@ -1,0 +1,9 @@
+{
+  "name": "merisociety",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "51d00e93"
+}
