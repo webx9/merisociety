@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-signup1',
@@ -9,7 +10,7 @@ export class Signup1Page implements OnInit {
   isOn: boolean;
   flatNumber: any;
   wingBlock: any;
-  constructor() { 
+  constructor(private authService: AuthenticationService) { 
     this.isOn = false;
   }
 
@@ -36,5 +37,8 @@ export class Signup1Page implements OnInit {
   {
     //alert("test 3");
     this.isOn = true;
+  }
+  login() {
+    this.authService.login();
   }
 }

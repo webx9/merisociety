@@ -12,6 +12,7 @@
 <ion-content>
     <ion-tabs #myTabs>
         <ion-tab tab="home">
+          <ion-button (click)="logout()" expand="block">Logout</ion-button>
           <ion-card class="welcome-card" [routerLink]="['/categorydetails']">
             <ion-card-header>
               <ion-card-title>Fresh Vegetables</ion-card-title>

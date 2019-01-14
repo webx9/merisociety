@@ -8,193 +8,45 @@
 </ion-header>
 
 <ion-content>
-    <ion-list>
-        <ion-item>
-          <ion-thumbnail slot="start" class="bigthumb">
-              <img src="/assets/potato.jpg">
-          </ion-thumbnail>          
+  <ion-grid>
+    <ion-row *ngFor="let product of items[0].products">
+      <ion-col size="4">
+          <ion-thumbnail class="bigthumb">
+              <img src="/assets/{{product.image}}">
+          </ion-thumbnail>
+      </ion-col>
+      <ion-col size="8">
           <ion-label>
-            <h2>Potato/Batata/Aloo</h2>
-              <ion-select class="wrapper-dropdown">
-                  <ion-select-option selected>1 Kg</ion-select-option>
-                  <ion-select-option>2 Kg</ion-select-option>
-                  <ion-select-option>5 Kg</ion-select-option>
-              </ion-select>
-            <p>MRP: <s>Rs. 30</s></p>
-            <h2><b>MSP: Rs. 28</b></h2>
-            <div *ngIf="isOn">
-              <ion-button color="success" size="default" icon-only fill="outline" (click)="decrementCnt()">
-                <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
-              </ion-button>
-              <span class="qty">{{count}}</span>
-              <ion-button color="success" size="default" icon-only fill="outline" (click)="incrementCnt()">
-                <ion-icon slot="icon-only" name="add-circle"></ion-icon>
-              </ion-button>
-            </div>
-            <div *ngIf="!isOn">
-              <ion-button color="success" size="default" fill="outline" (click)="incrementCnt()">
-                <ion-icon slot="start" name="add-circle"></ion-icon>
-                ADD
-              </ion-button>
-            </div>
-          </ion-label>
-        </ion-item>
-
-        <ion-item>
-            <ion-thumbnail slot="start" class="bigthumb">
-                <img src="/assets/onion.jpg">
-            </ion-thumbnail>
-            <ion-label>
-                <h2>Potato/Batata/Aloo</h2>
-                  <ion-select class="wrapper-dropdown">
-                      <ion-select-option selected>1 Kg</ion-select-option>
-                      <ion-select-option>2 Kg</ion-select-option>
-                      <ion-select-option>5 Kg</ion-select-option>
-                  </ion-select>
-                <p>MRP: <s>Rs. 30</s></p>
-                <h2><b>MSP: Rs. 28</b></h2>
-                <div *ngIf="isOn">
-                  <ion-button color="success" size="default" icon-only fill="outline" (click)="decrementCnt()">
-                    <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
-                  </ion-button>
-                  <span class="qty">{{count}}</span>
-                  <ion-button color="success" size="default" icon-only fill="outline" (click)="incrementCnt()">
-                    <ion-icon slot="icon-only" name="add-circle"></ion-icon>
-                  </ion-button>
-                </div>
-                <div *ngIf="!isOn">
-                  <ion-button color="success" size="default" fill="outline" (click)="incrementCnt()">
-                    <ion-icon slot="start" name="add-circle"></ion-icon>
-                    ADD
-                  </ion-button>
-                </div>
-              </ion-label>
-          </ion-item>
-          <ion-item>
-              <ion-thumbnail slot="start" class="bigthumb">
-                  <img src="/assets/flower.jpg">
-              </ion-thumbnail>
-              <ion-label>
-                  <h2>Potato/Batata/Aloo</h2>
-                    <ion-select class="wrapper-dropdown">
-                        <ion-select-option selected>1 Kg</ion-select-option>
-                        <ion-select-option>2 Kg</ion-select-option>
-                        <ion-select-option>5 Kg</ion-select-option>
-                    </ion-select>
-                  <p>MRP: <s>Rs. 30</s></p>
-                  <h2><b>MSP: Rs. 28</b></h2>
-                  <div *ngIf="isOn">
-                    <ion-button color="success" size="default" icon-only fill="outline" (click)="decrementCnt()">
-                      <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
-                    </ion-button>
-                    <span class="qty">{{count}}</span>
-                    <ion-button color="success" size="default" icon-only fill="outline" (click)="incrementCnt()">
-                      <ion-icon slot="icon-only" name="add-circle"></ion-icon>
-                    </ion-button>
-                  </div>
-                  <div *ngIf="!isOn">
-                    <ion-button color="success" size="default" fill="outline" (click)="incrementCnt()">
-                      <ion-icon slot="start" name="add-circle"></ion-icon>
-                      ADD
-                    </ion-button>
-                  </div>
-                </ion-label>
-            </ion-item>
-            <ion-item>
-                <ion-thumbnail slot="start" class="bigthumb">
-                    <img src="/assets/cabbage.jpg">
-                </ion-thumbnail>
-                <ion-label>
-                    <h2>Potato/Batata/Aloo</h2>
-                      <ion-select class="wrapper-dropdown">
-                          <ion-select-option selected>1 Kg</ion-select-option>
-                          <ion-select-option>2 Kg</ion-select-option>
-                          <ion-select-option>5 Kg</ion-select-option>
-                      </ion-select>
-                    <p>MRP: <s>Rs. 30</s></p>
-                    <h2><b>MSP: Rs. 28</b></h2>
-                    <div *ngIf="isOn">
-                      <ion-button color="success" size="default" icon-only fill="outline" (click)="decrementCnt()">
-                        <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
-                      </ion-button>
-                      <span class="qty">{{count}}</span>
-                      <ion-button color="success" size="default" icon-only fill="outline" (click)="incrementCnt()">
-                        <ion-icon slot="icon-only" name="add-circle"></ion-icon>
-                      </ion-button>
-                    </div>
-                    <div *ngIf="!isOn">
-                      <ion-button color="success" size="default" fill="outline" (click)="incrementCnt()">
-                        <ion-icon slot="start" name="add-circle"></ion-icon>
-                        ADD
-                      </ion-button>
-                    </div>
-                  </ion-label>
-              </ion-item>
-              <ion-item>
-                  <ion-thumbnail slot="start" class="bigthumb">
-                      <img src="/assets/capsicum.jpg">
-                  </ion-thumbnail>
-                  <ion-label>
-                      <h2>Potato/Batata/Aloo</h2>
-                        <ion-select class="wrapper-dropdown">
-                            <ion-select-option selected>1 Kg</ion-select-option>
-                            <ion-select-option>2 Kg</ion-select-option>
-                            <ion-select-option>5 Kg</ion-select-option>
-                        </ion-select>
-                      <p>MRP: <s>Rs. 30</s></p>
-                      <h2><b>MSP: Rs. 28</b></h2>
-                      <div *ngIf="isOn">
-                        <ion-button color="success" size="default" icon-only fill="outline" (click)="decrementCnt()">
-                          <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
-                        </ion-button>
-                        <span class="qty">{{count}}</span>
-                        <ion-button color="success" size="default" icon-only fill="outline" (click)="incrementCnt()">
-                          <ion-icon slot="icon-only" name="add-circle"></ion-icon>
-                        </ion-button>
-                      </div>
-                      <div *ngIf="!isOn">
-                        <ion-button color="success" size="default" fill="outline" (click)="incrementCnt()">
-                          <ion-icon slot="start" name="add-circle"></ion-icon>
-                          ADD
-                        </ion-button>
-                      </div>
-                    </ion-label>
-                </ion-item>
-                <ion-item>
-                    <ion-thumbnail slot="start" class="bigthumb">
-                        <img src="/assets/karela.jpg">
-                    </ion-thumbnail>
-                    <ion-label>
-                        <h2>Potato/Batata/Aloo</h2>
-                          <ion-select class="wrapper-dropdown">
-                              <ion-select-option selected>1 Kg</ion-select-option>
-                              <ion-select-option>2 Kg</ion-select-option>
-                              <ion-select-option>5 Kg</ion-select-option>
-                          </ion-select>
-                        <p>MRP: <s>Rs. 30</s></p>
-                        <h2><b>MSP: Rs. 28</b></h2>
-                        <div *ngIf="isOn">
-                          <ion-button color="success" size="default" icon-only fill="outline" (click)="decrementCnt()">
-                            <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
-                          </ion-button>
-                          <span class="qty">{{count}}</span>
-                          <ion-button color="success" size="default" icon-only fill="outline" (click)="incrementCnt()">
-                            <ion-icon slot="icon-only" name="add-circle"></ion-icon>
-                          </ion-button>
-                        </div>
-                        <div *ngIf="!isOn">
-                          <ion-button color="success" size="default" fill="outline" (click)="incrementCnt()">
-                            <ion-icon slot="start" name="add-circle"></ion-icon>
-                            ADD
-                          </ion-button>
-                        </div>
-                      </ion-label>
-                  </ion-item>
-    </ion-list>
+              <h2>{{ product.name }}</h2>
+                <!--<ion-select class="wrapper-dropdown">
+                    <ion-select-option *ngFor="let atr of items[0].products[product.id].attributes">{{atr.attr}} {{atr.price}}</ion-select-option>
+                </ion-select>-->
+              <p *ngFor="let atr of items[0].products[product.id].attributes">1 Kg</p>
+              <p>MRP: <s>Rs. {{product.mrp}}</s></p>
+              <h2><b>MSP: Rs. {{ product.msp }}</b></h2>
+              <div *ngIf="isOn">
+                <ion-button color="success" size="default" icon-only fill="outline" (click)="decrementCnt()">
+                  <ion-icon slot="icon-only" name="remove-circle"></ion-icon>
+                </ion-button>
+                <span class="qty">{{count}}</span>
+                <ion-button color="success" size="default" icon-only fill="outline" (click)="incrementCnt()">
+                  <ion-icon slot="icon-only" name="add-circle"></ion-icon>
+                </ion-button>
+              </div>
+              <div *ngIf="!isOn">
+                <ion-button color="success" size="default" fill="outline" (click)="incrementCnt()">
+                  <ion-icon slot="start" name="add-circle"></ion-icon>
+                  ADD
+                </ion-button>
+              </div>
+            </ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 <ion-footer>
         <ion-button expand="full" size="default" color="success" [routerLink]="['/cart']">
             <ion-icon slot="start" name="cart"></ion-icon>
             View Cart
-          </ion-button>
+        </ion-button>
 </ion-footer>

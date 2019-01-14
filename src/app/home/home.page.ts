@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavController, Tabs, ToastController } from '@ionic/angular';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomePage {
   @ViewChild('myTabs') tabRef: Tabs;
   count: number;
   isOn: boolean;
-  constructor(private router: Router,public navCtrl: NavController,private Toast: ToastController){
+  constructor(private router: Router,public navCtrl: NavController,private Toast: ToastController,private authService: AuthenticationService){
     this.count = 0;
     this.isOn = false;
   }
@@ -49,5 +50,8 @@ export class HomePage {
     {
       this.isOn = false;
     }
+  }
+  logout() {
+    this.authService.logout();
   }
 }

@@ -3,11 +3,29 @@
       <ion-buttons slot="start">
           <ion-back-button></ion-back-button>
         </ion-buttons>
-    <ion-title>Confirm Order</ion-title>
+    <ion-title>Checkout</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+    <ion-grid>
+        <ion-row>
+            <ion-col>13 Items</ion-col>
+            <ion-col>View Items</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Subtotal</ion-col>
+            <ion-col>Rs. 526</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Delivery Charges</ion-col>
+            <ion-col>Rs. 10</ion-col>
+        </ion-row>
+        <ion-row>
+                <ion-col>Total</ion-col>
+                <ion-col>Rs. 536</ion-col>
+        </ion-row>
+    </ion-grid>
     <ion-text color="dark">
         <h5>Deliver to:</h5>
     </ion-text>
@@ -16,11 +34,12 @@
     </p>
     <ion-text color="dark">
         <h6>Today, 8:55 PM - 10:55 PM</h6>
-    </ion-text>
-    <ion-text color="dark">
-        <h6>Delivery Charges: FREE</h6>
-    </ion-text>
+    </ion-text> 
     <p><br></p>
+    <ion-text color="dark">
+        <h6>Payment Mode: </h6><p>Cash / Credit or Debit Card / QR Payment on Delivery</p>
+    </ion-text>
+    
     <ion-button expand="full" size="default" color="success"  [routerLink]="['/orderconfirmation']">
       <ion-icon slot="start" name="checkbox"></ion-icon>
       Place Order
